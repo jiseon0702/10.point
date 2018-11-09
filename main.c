@@ -3,24 +3,32 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	
-	int grade[5] = {10, 20, 30, 40, 50};
-	int average=0;
-	int *ptr;
-	int i;
 
-	//pointer setting
-	ptr=grade;
-	
-	//average calculation
-	for (i=0;i<5;i++)
+	void swap (int *a, int *b)
 	{
-		average +=*(ptr+i); // ptr[i]
+		int temp;
+		temp =*a;
+		*a=*b;
+		*b=temp;
+		
+		return;
 		
 	}
 	
-	printf("average : %i\n", average/5);
+	int main(void){
+		
+		int x=48;
+		int y=85;
+		
+		printf("x=%i, ",x);
+		printf("y=%i\n", y);
+		
+		swap(&x,&y);
+		
+		printf("x=%i,",x);
+		printf("y=%i\n",y);
+		
+		
 	
 	return 0;
 }
